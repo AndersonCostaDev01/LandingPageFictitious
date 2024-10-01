@@ -11,6 +11,10 @@ Devera conter no projeto.
   • Uma aba com mais informaçoes que tenha alguma animação do AOS animete 
   
   • Uma barra de informaços sobre valor e botão para comprar o ingresso 
+
+/*
+  English Text
+*/
   
 Creation of a fictitious landing page for an event, based on the teachings from the EBAC module, putting into practice a countdown timer and functions like AOS animate.
 
