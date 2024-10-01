@@ -1,0 +1,64 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../images/BanerHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        height: 90px;
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        text-align: center;
+    }
+}
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: #ffffff77;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: variables.$corTextoSecundario;
+
+            b {
+                font-size: 18px;
+                display: block;
+                color: variables.$corTextoSecundario;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        
+        &__infos {
+            gap: 16px ;
+        }
+    }
+}

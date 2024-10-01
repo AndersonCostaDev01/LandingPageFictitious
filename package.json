@@ -1,0 +1,18 @@
+{
+  "name": "landingpagefictitious",
+  "version": "1.0.0",
+  "description": "Criação de uma landing page ficticia sobre um evento usando como base os ensinamentos do modulo da EBAC, colocando em pratica o contador regresivo e funçoes como o AOS animate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
+    "sass": "^1.79.4"
+  }
+}

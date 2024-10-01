@@ -1,0 +1,96 @@
+@use 'variables';
+@use 'hero';
+
+/*
+    Criação das fontes do site
+*/
+@font-face {
+    font-family: Roboto;
+    src: url(../../Assets/Roboto-Black.ttf);
+    font-weight: 200;
+}
+
+/*
+    Criação de variaveis para texto
+*/
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$corTextoPrincipal;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: variables.$corTextoPrincipal;
+}
+
+/*
+    Reset da pagina
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+} 
+
+/*
+    Definição do conteiner do site
+*/
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+    @media (max-width: 1024px){
+        max-width: 90%;
+    }
+}
+
+/*
+    Criação de itens reaproveitaveis
+*/
+.title {
+    @include title()
+}
+
+.title--big {
+    @include title(40px);
+    font-weight: 800;
+}
+
+.title--smal {
+    @include title(22px);
+}
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 5px;
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$pink;
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+    }
+
+    @media (max-width:1024px) {
+        display: flex;
+        align-items: center;
+    }
+}
