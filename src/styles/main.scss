@@ -1,5 +1,7 @@
 @use 'variables';
 @use 'hero';
+@use 'event';
+@use 'footer';
 
 /*
     Criação das fontes do site
@@ -70,6 +72,14 @@
     @include title(22px);
 }
 
+.text {
+    @include text();
+}
+
+.text--smal {
+    @include text(10px)
+}
+
 .button {
     padding: 12px;
     font-size: 18px;
@@ -82,6 +92,11 @@
     &--primary {
         color: #fff;
         background-color: variables.$pink;
+
+        &:hover {
+            background-color: variables.$purple;
+            transition: .5s;
+        }
     }
 
     @media (max-width: 640px) {
@@ -94,3 +109,9 @@
         align-items: center;
     }
 }
+
+h4 {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    }
